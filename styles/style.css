@@ -88,6 +88,37 @@ a, a:visited {
 	margin-right: 0;
 }
 
+.menu-header-item--button {
+	width: 40px;
+	height: 40px;
+	border: none;
+	background-color: transparent;
+}
+
+.menu-header-item--button--call {
+	background-image: url("/imgs/ic/ic_call.svg");
+}
+
+.menu-header-item--button--chat {
+	background-image: url("/imgs/ic/ic_chat.svg");
+}
+
+.menu-header-item--button--profile {
+	background-image: url("/imgs/ic/ic_profile.svg");
+}
+
+.menu-header-item--button--repair {
+	background-image: url("/imgs/ic/repair.svg");
+}
+
+.menu-header-item--button--checkstatus {
+	background-image: url("/imgs/ic/checkstatus.svg");
+}
+
+.menu-header-item--button--burger {
+	background-image: url("/imgs/ic/burger.svg");
+}
+
 .menu__header-item--title {
 	display: none;
 }
@@ -376,6 +407,7 @@ a, a:visited {
 	
 	.menu--right-side {
 		align-self: flex-end;
+		width: unset;
 	}
 	
 	.article__image {
