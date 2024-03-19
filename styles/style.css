@@ -96,27 +96,27 @@ a, a:visited {
 }
 
 .menu-header-item--button--call {
-	background-image: url("/imgs/ic/ic_call.svg");
+	background-image: url("../imgs/ic/ic_call.svg");
 }
 
 .menu-header-item--button--chat {
-	background-image: url("/imgs/ic/ic_chat.svg");
+	background-image: url("../imgs/ic/ic_chat.svg");
 }
 
 .menu-header-item--button--profile {
-	background-image: url("/imgs/ic/ic_profile.svg");
+	background-image: url("../imgs/ic/ic_profile.svg");
 }
 
 .menu-header-item--button--repair {
-	background-image: url("/imgs/ic/repair.svg");
+	background-image: url("../imgs/ic/repair.svg");
 }
 
 .menu-header-item--button--checkstatus {
-	background-image: url("/imgs/ic/checkstatus.svg");
+	background-image: url("../imgs/ic/checkstatus.svg");
 }
 
 .menu-header-item--button--burger {
-	background-image: url("/imgs/ic/burger.svg");
+	background-image: url("../imgs/ic/burger.svg");
 }
 
 .menu__header-item--title {
