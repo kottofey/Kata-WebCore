@@ -26,7 +26,7 @@
 				<ul class="menu--left-side menu__header-item--hide-on-desktop">
 					<li class="menu__header-item">
 						<button
-								class="menu-header-item--button menu-header-item--button--burger"></button>
+								class="menu__header-item--button menu__header-item--button-burger"></button>
 					</li>
 					<li class="menu__header-item menu__header-item--divider menu--laptop"></li>
 					<li class="menu__header-item">
@@ -39,28 +39,28 @@
 				<ul class="menu--right-side">
 					<li class="menu__header-item menu__header-item--hide-on-desktop menu--laptop">
 						<button
-								class="menu-header-item--button menu-header-item--button--call"></button>
+								class="menu__header-item--button menu__header-item--button-call"></button>
 					</li>
 					<li class="menu__header-item menu__header-item--hide-on-desktop menu--laptop">
 						<button
-								class="menu-header-item--button menu-header-item--button--chat"></button>
+								class="menu__header-item--button menu__header-item--button-chat"></button>
 					</li>
 					<li class="menu__header-item menu__header-item--hide-on-desktop menu--laptop">
 						<button
-								class="menu-header-item--button menu-header-item--button--profile"></button>
+								class="menu__header-item--button menu__header-item--button-profile"></button>
 					</li>
 					<li class="menu__header-item menu__header-item--divider menu__header-item--hide-on-desktop"></li>
 					<li class="menu__header-item">
 						<span
 								class="menu__header-item--title">Оставить заявку</span>
 						<button
-								class="menu-header-item--button menu-header-item--button--repair"></button>
+								class="menu__header-item--button menu__header-item--button-repair"></button>
 					</li>
 					<li class="menu__header-item">
 						<span
 								class="menu__header-item--title">Статус ремонта</span>
 						<button
-								class="menu-header-item--button menu-header-item--button--checkstatus"></button>
+								class="menu__header-item--button menu__header-item--button-checkstatus"></button>
 					</li>
 				</ul>
 			</nav>
@@ -68,6 +68,56 @@
 			<h1 class="title title--top">Услуги и сервисы</h1>
 		</div> <!--end of desktop wrapper-->
 
+		
+		<!-- mobile menu -->
+		<div class="mobile-side">
+			<ul class="menu mobile-side--width--320 mobile-side--side-margins--20">
+				<li class="menu__header-item">
+					<button class="menu__header-item--button menu__header-item--button-burger"></button>
+				</li>
+				<li class="menu__header-item">
+					<img alt="Логотип ЦПС" src="./imgs/header-logo.svg">
+				</li>
+				<li class="menu__header-item menu__header-item--push-right">
+					<button class="menu__header-item--button menu__header-item--button-search"></button>
+				</li>
+			</ul>
+
+			<span class="mobile-side__menu-item mobile-side__item--active">Ремонт техники</span>
+			<span class="mobile-side__menu-item">Услуги и сервисы</span>
+			<span class="mobile-side__menu-item">Корпоративным клиентам</span>
+			<span class="mobile-side__menu-item">Продавцам техники</span>
+			<span class="mobile-side__menu-item">Партнерам</span>
+			<span class="mobile-side__menu-item">Производителям</span>
+			<span class="mobile-side__menu-item">Наши сервисные центры</span>
+			<span class="mobile-side__menu-item">Контакты</span>
+
+			<ul class="menu mobile-side--side-margins--20 menu__header-item--push-down">
+				<li class="menu__header-item">
+					<button class="menu__header-item--button menu__header-item--button-call"></button>
+				</li>
+				<li class="menu__header-item">
+					<button class="menu__header-item--button menu__header-item--button-chat"></button>
+				</li>
+				<li class="menu__header-item">
+					<button class="menu__header-item--button menu__header-item--button-profile"></button>
+				</li>
+			</ul>
+
+			<span class="mobile-side--side-margins--20 mobile-side--bottom-margin-15">mail@cps.com</span>
+			<span class="mobile-side--tel mobile-side--side-margins--20 mobile-side--bottom-margin-15">8 800 890 89 00</span>
+
+			<form action="#" class="lang-switch mobile-side--side-margins--20 mobile-side--bottom-margin-15">
+				<input type="radio" name="lang" id="lang-ru" class="lang-switch__item"><label for="lang-ru">RU</label>
+
+				<input type="radio" name="lang" id="lang-en" class="lang-switch__item"><label for="lang-en">EN</label>
+
+				<input checked type="radio" name="lang" id="lang-cn" class="lang-switch__item"><label for="lang-cn">CN</label>
+			</form>
+		</div>
+		<!-- end of mobile menu -->
+		
+		
 		<ul class="menu slider-menu menu--fading">
 			<li class="slider-menu__slider-item menu--active-item">
 				<a href="#">Ремонтируемые бренды</a>
