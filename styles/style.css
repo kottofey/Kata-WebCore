@@ -77,7 +77,7 @@ a, a:visited {
 	position: absolute;
 }
 
-.lang-switch__item:checked + label {
+.lang-switch__item:checked + .lang-switch__label--text {
 	color: #7E7E82;
 }
 
@@ -331,10 +331,12 @@ a, a:visited {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	left: 0;
 	min-height: 100%;
 	background-color: #fff;
 	z-index: 10;
+	box-shadow:
+			16px 0 52px 0 rgba(14, 24, 80, 0.2),
+			-2px 0 4px 0 rgba(69, 79, 126, 0.02);
 }
 
 .mobile-side--side-margins--20 {
