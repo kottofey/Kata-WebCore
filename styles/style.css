@@ -41,10 +41,16 @@ html {
 	box-sizing: inherit;
 }
 
-ul, li, body, p {
+ul,
+li,
+body,
+p,
+button {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	border: none;
+	font: inherit;
 }
 
 a, a:visited {
@@ -57,6 +63,7 @@ a, a:visited {
 	overflow: hidden;
 	max-width: 767px;
 	background-color: #f8f8f8;
+	position: relative;
 }
 
 .header {
@@ -330,13 +337,13 @@ a, a:visited {
 .mobile-side {
 	display: flex;
 	flex-direction: column;
-	position: absolute;
+	position: relative;
 	min-height: 100%;
+	width: 320px;
 	background-color: #fff;
 	z-index: 10;
-	box-shadow:
-			16px 0 52px 0 rgba(14, 24, 80, 0.2),
-			-2px 0 4px 0 rgba(69, 79, 126, 0.02);
+	box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2),
+	-2px 0 4px 0 rgba(69, 79, 126, 0.02);
 }
 
 .mobile-side--side-margins--20 {
@@ -375,6 +382,80 @@ a, a:visited {
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
 	background-color: #41f6d7;
+}
+
+/*Slider */
+.brands-repair-list {
+	position: relative;
+}
+
+.brands-repair-list__title {
+	margin: 16px auto 40px 32px;
+	text-transform: uppercase;
+}
+
+.brands-repair-list__more {
+	margin-left: 48px;
+	margin-top: 24px;
+	background-color: #f8f8f8;
+	position: relative;
+}
+
+.brands-repair-list__more::before {
+	content: '';
+	position: absolute;
+	left: -12px;
+	top: 2px;
+	height: 5px;
+	width: 5px;
+	rotate: 45deg;
+	box-shadow:
+		1px 1px 0 0 #5df6dc,
+		3px 3px 0 0 #f8f8f8,
+		4px 4px 0 0 #5df6dc;
+}
+
+.brands-repair-list--wide-screen {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px 32px;
+	max-width: 100%;
+	margin-left: 32px;
+	height: 170px;
+	/*height: fit-content;*/
+	overflow: hidden;
+}
+
+.brands-repair-list__card--lenovo {
+	background: url('../imgs/logos/Lenovo.svg') no-repeat;
+}
+
+.brands-repair-list__card--samsung {
+	background: url('../imgs/logos/Samsung.svg') no-repeat;
+}
+
+.brands-repair-list__card--apple {
+	background: url('../imgs/logos/Apple.svg') no-repeat;
+}
+
+.brands-repair-list__card--viewsonic {
+	background: url('../imgs/logos/ViewSonic.svg') no-repeat;
+}
+
+.brands-repair-list__card--bosch {
+	background: url('../imgs/logos/Bosch.svg') no-repeat;
+}
+
+.brands-repair-list__card--hp {
+	background: url('../imgs/logos/HelpPlease.svg') no-repeat;
+}
+
+.brands-repair-list__card--acer {
+	background: url('../imgs/logos/Acer.svg') no-repeat;
+}
+
+.brands-repair-list__card--sony {
+	background: url('../imgs/logos/Sony.svg') no-repeat;
 }
 
 /*laptop view*/
@@ -513,5 +594,42 @@ a, a:visited {
 	.article__image {
 		max-width: 50%;
 		height: auto;
+	}
+	
+	/* Logo Slider */
+	.brands-repair-list__card {
+		display: flex;
+		flex: 0 0 240px;
+		position: relative;
+		height: 72px;
+		background-color: #fff;
+		background-position: 10px center;
+		
+		border: 1px #eaeaea solid;
+	}
+	
+	.brands-repair-list__card::after {
+		content: '';
+		/*position: relative;*/
+		z-index: 1;
+		width: 39px;
+		height: 39px;
+		border: 1px solid #ff3e79;
+		border-radius: 50%;
+		margin: auto 0;
+		margin-left: 184px;
+	}
+	
+	.brands-repair-list__card::before {
+		content: '';
+		width: 10px;
+		height: 10px;
+		border-right: 1px solid #ff3e79;
+		border-top: 1px solid #ff3e79;
+		
+		position: absolute;
+		top: 31px;
+		right: 32px;
+		rotate: 45deg;
 	}
 }
