@@ -425,14 +425,16 @@ a, a:visited {
 .brands-repair-list__card {
 	display: flex;
 	position: relative;
-	flex: 0 0 240px;
+	flex: 0 0 222px;
 	height: 72px;
+	
 	border: 1px #eaeaea solid;
 	border-radius: 6px;
 	background-color: #fff;
 	background-position: 20px center;
 }
 
+/*circle*/
 .brands-repair-list__card::after {
 	content: '';
 	z-index: 1;
@@ -440,9 +442,10 @@ a, a:visited {
 	height: 39px;
 	border: 1px solid #ff3e79;
 	border-radius: 50%;
-	margin: auto 0 auto 184px;
+	margin: auto 0 auto 168px;
 }
 
+/*little arrow in circle*/
 .brands-repair-list__card::before {
 	content: '';
 	position: absolute;
@@ -451,7 +454,7 @@ a, a:visited {
 	border-right: 1px solid #ff3e79;
 	border-top: 1px solid #ff3e79;
 	top: 30px;
-	right: 32px;
+	right: 30px;
 	rotate: 45deg;
 }
 
@@ -461,9 +464,9 @@ a, a:visited {
 }
 
 .brands-repair-list__more-btn {
-	display: none;
+	/*display: inline-block;*/
 	margin-left: 48px;
-	margin-top: 24px;
+	/*margin-top: 16px;*/
 	background-color: #f8f8f8;
 	position: relative;
 }
@@ -483,7 +486,7 @@ a, a:visited {
 
 .brands-repair-list__less-btn {
 	margin-left: 48px;
-	margin-top: 24px;
+	margin-top: 8px;
 	background-color: #f8f8f8;
 	position: relative;
 }
@@ -504,9 +507,9 @@ a, a:visited {
 .brands-repair-list--wide-screen {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 16px 32px;
+	gap: 16px 24px;
 	max-width: 100%;
-	margin-left: 32px;
+	margin-left: 24px;
 	height: 170px;
 	overflow: hidden;
 	
@@ -653,12 +656,31 @@ a, a:visited {
 	}
 }
 
-@media screen and (768px <= width) {
+/*mobile only, width less than 768px*/
+@media screen and (width <= 767px) {
 	.brands-repair-list__more-btn {
-		display: inline-block;
+		display: none;
 	}
 	
 	.brands-repair-list--wide-screen {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		gap: unset;
+		
+		max-width: unset;
+		margin-left: 0;
+		height: fit-content;
+	}
 	
+	.swiper-wrapper__fade {
+		position: absolute;
+		height: 74px;
+		width: 34px;
+		bottom: 38px;
+		right: 0;
+		z-index: 1;
+		background: linear-gradient(
+				270.00deg, rgb(248, 248, 248) 16.836%, rgba(248, 248, 248, 0) 100%);
 	}
 }
