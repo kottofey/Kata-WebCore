@@ -1,7 +1,7 @@
 if (window.innerWidth <= 767) {
-  let wrapper = document.querySelector('.brands-repair-list--wide-screen');
+  let wrapper = document.querySelector('.brands-repair-list__wrapper');
   wrapper.classList.add('swiper-wrapper');
-  wrapper.classList.remove('brands-repair-list--wide-screen')
+  wrapper.classList.remove('brands-repair-list__wrapper')
 
   document.querySelector('.swiper-pagination').hidden = false;
 
@@ -16,7 +16,7 @@ if (window.innerWidth <= 767) {
     spaceBetween: 16,
 
     // this calculates the distance a slide should move
-    // depending on screen width on page load
+    // depending on screen width on document load
     // slidesPerView = (screen width + spaceBetween) / scroll distance
     slidesPerView: (window.innerWidth + 16) / (224 + 16),
   })

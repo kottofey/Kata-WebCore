@@ -1,18 +1,17 @@
-let moreBtn = document.querySelector('.brands-repair-list__more-btn');
-let list = document.querySelector('.brands-repair-list--wide-screen');
+const moreBtn = document.querySelector('.brands-repair-list__more-btn');
+const list = document.querySelector('.brands-repair-list__wrapper');
 
-let createMoreBtnHandler = function (button) {
+const createMoreBtnHandler = function (button) {
 
     button.addEventListener('click', function () {
         let isExpanded = moreBtn.classList.contains('brands-repair-list__less-btn');
-
-        list.style.height = `${list.scrollHeight}px`;
-        moreBtn.textContent = 'Свернуть';
+        list.classList.toggle('brands-repair-list__wrapper--expanded');
         moreBtn.classList.toggle('brands-repair-list__less-btn');
 
         if (isExpanded) {
-            list.style.height = '170px';
             moreBtn.textContent = 'Показать все';
+        } else {
+            moreBtn.textContent = 'Свернуть';
         }
     });
 

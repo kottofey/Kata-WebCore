@@ -464,11 +464,9 @@ a, a:visited {
 }
 
 .brands-repair-list__more-btn {
-	/*display: inline-block;*/
-	margin-left: 48px;
-	/*margin-top: 16px;*/
-	background-color: #f8f8f8;
 	position: relative;
+	margin-left: 48px;
+	background-color: #f8f8f8;
 }
 
 .brands-repair-list__more-btn::before {
@@ -485,26 +483,15 @@ a, a:visited {
 }
 
 .brands-repair-list__less-btn {
-	margin-left: 48px;
 	margin-top: 8px;
-	background-color: #f8f8f8;
-	position: relative;
 }
 
 .brands-repair-list__less-btn::before {
-	content: '';
-	position: absolute;
-	left: -12px;
 	top: 13px;
-	height: 5px;
-	width: 5px;
 	rotate: 225deg;
-	box-shadow: 1px 1px 0 0 #5df6dc,
-	3px 3px 0 0 #f8f8f8,
-	4px 4px 0 0 #5df6dc;
 }
 
-.brands-repair-list--wide-screen {
+.brands-repair-list__wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 16px 24px;
@@ -512,10 +499,11 @@ a, a:visited {
 	margin-left: 24px;
 	height: 170px;
 	overflow: hidden;
-	
-	transition: height ease-in-out 400ms;
 }
 
+.brands-repair-list__wrapper--expanded {
+	height: fit-content;
+}
 
 /*laptop view*/
 @media screen and (768px <= width) and (width < 1120px) {
@@ -662,7 +650,7 @@ a, a:visited {
 		display: none;
 	}
 	
-	.brands-repair-list--wide-screen {
+	.brands-repair-list__wrapper {
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
