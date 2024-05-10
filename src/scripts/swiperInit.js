@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
-import {Pagination} from "swiper/modules";
 import 'swiper/css/pagination';
 
 if (window.innerWidth <= 767) {
@@ -10,7 +10,8 @@ if (window.innerWidth <= 767) {
 
 	document.querySelector('.swiper-pagination').hidden = false;
 
-	const swiper = new Swiper(".brands-repair-list", {
+const swiper = new Swiper(".brands-repair-list", {
+		modules: [ Pagination ],
 		direction: "horizontal",
 		slidesOffsetBefore: 16,
 		slidesOffsetAfter: 16,
