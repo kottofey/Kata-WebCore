@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -6,7 +6,6 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		index: './scripts/index.js',
-		// showMoreBtn: './scripts/showMoreBtnHandler.js'
 	},
 	output: {
 		filename: '[name].[contenthash].js',
@@ -15,14 +14,14 @@ module.exports = {
 	},
 	plugins: [
 		new htmlWebpackPlugin({
-			template: "./index.html"
+			template: './index.html',
 		}),
 	],
 	module: {
 		rules: [
 			{
 				test: /\.css$/i,
-				use: ['style-loader', 'css-loader']
+				use: ['style-loader', 'css-loader'],
 			},
 			{
 				test: /\.(html?)$/i,
@@ -30,11 +29,11 @@ module.exports = {
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
-				type: "asset/resource",
-			}
-		]
+				type: 'asset/resource',
+			},
+		],
 	},
 	devServer: {
 		port: 4200,
-	}
-}
+	},
+};
