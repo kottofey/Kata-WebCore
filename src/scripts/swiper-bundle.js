@@ -9626,4 +9626,4 @@ var Swiper = (function () {
 
   return Swiper;
 
-})();
+}) ();

@@ -466,6 +466,7 @@ a, a:visited {
 .brands-repair-list__more-btn {
 	position: relative;
 	margin-left: 48px;
+	margin-bottom: 16px;
 	background-color: #f8f8f8;
 }
 
@@ -499,6 +500,8 @@ a, a:visited {
 	margin-left: 24px;
 	height: 170px;
 	overflow: hidden;
+	
+	transition: height ease-in-out 400ms;
 }
 
 .brands-repair-list__wrapper--expanded {
@@ -670,5 +673,14 @@ a, a:visited {
 		z-index: 1;
 		background: linear-gradient(
 				270.00deg, rgb(248, 248, 248) 16.836%, rgba(248, 248, 248, 0) 100%);
+	}
+	
+	.swiper-pagination {
+		position: relative;
+		top: 0 !important;
+		bottom: 0 !important;
+		right: 0 !important;
+		left: 0 !important;
+		margin: 10px auto;
 	}
 }
